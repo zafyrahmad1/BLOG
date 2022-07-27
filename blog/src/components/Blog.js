@@ -2,15 +2,10 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
-
-import Sidebar from './Sidebar';
 import Footer from './Footer';
 
 const sections = [
@@ -39,8 +34,7 @@ const featuredPosts = [
   {
     title: 'Sports',
     date: 'The Boys & Girls club has many differnt sports to offer for example Basketball, Swimming etc.',
-    description:
-      '',
+    
     image: 'https://th.bing.com/th/id/OIP.A8kMmKETm3wYSoF5WRvJ1AHaLx?pid=ImgDet&rs=1',
     imageLabel: 'Image Text',
   },
@@ -55,14 +49,13 @@ const featuredPosts = [
   {
     date: 'Click Here to read more about the boys and girls club.',
     image: 'https://th.bing.com/th/id/OIP.cHAiMFxpj1mWdjFZ-K7-XgHaD4?pid=ImgDet&rs=1',
-    
-    
-    
+
   }
 ];
  
 
 
+const theme = createTheme();
 
 export default function Blog() {
   return (
@@ -79,12 +72,7 @@ export default function Blog() {
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
 
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
+            
           </Grid>
         </main>
       </Container>
